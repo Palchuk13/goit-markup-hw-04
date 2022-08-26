@@ -245,12 +245,23 @@ img {
   flex-wrap: wrap;
 }
 
-.feature-list .item {
+/*.feature-link {
+  background-color: var(--secondary-background-color);
+  border-radius: 4px;
+}
+.feature-link::before {
+  content: '';
   width: 270px;
+  height: 120px;
+  background-color: var(--secondary-background-color);
+}*/
+
+.feature-item {
+  max-width: 270px;
   margin-right: var(--margin-gap);
 }
 
-.feature-list .item:last-child {
+.feature-item:last-child {
   margin-right: 0;
 }
 
@@ -285,8 +296,9 @@ img {
   margin-right: 0;
 }
 
-.work > .container > .section-title,
-.team > .container > .section-title {
+.work-title,
+.teams-title,
+.client-title {
   margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.16;
@@ -356,8 +368,7 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--icon-color);
-  fill: currentColor;
+  fill: var(--icon-color);
 }
 
 .social-link:hover,
@@ -369,32 +380,57 @@ img {
 /* Clients */
 .client {
   padding-top: var(--padding-gap);
-  padding-bottom: var(--padding-gap);
+  padding-bottom: 85px;
 
   text-align: center;
 }
 .client-list {
   display: flex;
   flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
 }
-.client-list .item {
-  margin-right: var(--margin-gap);
+.client-item + .item {
+  margin-left: var(--margin-gap);
 }
 
-.client-list .item:nth-child(6n) {
-  margin-right: 0;
+.company-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: var(--icon-color);
+}
+
+.company-link:focus,
+.company-link:hover {
+  border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* Footer*/
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-
   background-color: var(--accent-background-color);
   font-style: normal;
 }
 
-.footer > .container > .logo {
+.footer-container {
+  display: flex;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-nav {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.logo {
   margin-bottom: 20px;
   margin-right: 0;
 
@@ -420,6 +456,41 @@ img {
 
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-social-links {
+  padding-top: 72px;
+  padding-bottom: 100px;
+  margin-left: 70px;
+}
+.footer-title {
+  margin-bottom: 20px;
+
+  line-height: 1.14;
+  color: var(--primary-white-color);
+  text-transform: uppercase;
+}
+
+.footer-links {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--primary-white-color);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  background-color: var(--accent-color);
 }
 
 /* Portfolio Filter section */
