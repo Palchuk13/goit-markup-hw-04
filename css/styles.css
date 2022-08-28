@@ -143,12 +143,14 @@ img {
 .contact-nav {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 
 .nav-link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 
   color: var(--primary-text-color);
   font-weight: 500;
@@ -160,7 +162,6 @@ img {
 .contact-phone {
   margin-right: 10px;
   fill: currentColor;
-  background-color: red;
 }
 
 /* Hero */
