@@ -361,8 +361,7 @@ img {
 }
 
 .team-content {
-  padding-top: 30px;
-  padding-bottom: 16px;
+  padding: 30px 32px;
 }
 
 .team-title {
@@ -374,6 +373,8 @@ img {
 }
 
 .team-desc {
+  margin-bottom: 16px;
+
   font-size: 16px;
   line-height: 1.18;
 }
@@ -382,7 +383,6 @@ img {
   display: flex;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 32px 30px;
 }
 .social-item {
   margin-right: 10px;
